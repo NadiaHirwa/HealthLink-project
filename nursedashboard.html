@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initialscale=1.0">
+        <link rel="stylesheet" href="./styles/dashboard.css">
+        <title>#nurse panel</title>  
+    </head>
+    <body>
+        <div class="side-menu">
+            <div class="brand-name">
+                <h1>HEALTHLINK</h1>
+            </div>
+            <ul> 
+                <li><span><a href="#medical">Medical History</a></span></li>
+                <li><span><a href="#passess">Patient Assessments</a></span></li>
+                <li><span><a href="#pList">Patient List</a></span></li>
+                <li> <span><a href="index.html">Logout</a></span></li>
+            </ul>
+        </div>
+        <div class="container">
+            <div class="header">
+                <div class="nav">
+                    <div class="search">
+                        <input type="search" placeholder="Search...">
+                        <button type="submit"><img src="./imgs/search2.png"></button>
+                    </div>
+                    <div class="user">
+                        <a href="#" class="btn">Add new</a>
+                        <img src="./imgs/notification.png" alt="">
+                        <div class="img-case">
+                            <img src="./imgs/profile1.png" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="content">
+                <h1>WELCOME #name</h1>
+                <section id="passess">     
+                    <div class="content-2">
+                        <div class="new-students">
+                            <div class="title">
+                                <h2>Enter history</h2>
+                            </div>
+                            <style>
+                                form{
+                                    height: 70vh;
+                                    overflow-y: scroll;
+                                }
+                                .input-group {
+                                    margin-bottom: 10px;
+                                }
+                                
+                                label {
+                                    display: block;
+                                    margin-bottom: 3px;
+                                    color: #19191a;
+                                }
+                                
+                                input[type="text"],
+                                input[type="password"] {
+                                    width: 90%;
+                                    padding: 10px;
+                                    border: 1px solid #ccc;
+                                    border-radius: 3px;
+                                }
+                                
+                                .btn {
+                                    background-color: #059ff8;
+                                    color: #fff;
+                                    padding: 10px 15px;
+                                    border: none;
+                                    border-radius: 3px;
+                                    cursor: pointer;
+                                }
+                                
+                                .btn:hover {
+                                    background-color: #a2dafa;
+                                }
+                            </style>
+                            <form id="update"  method="post" >
+                                <h5>Patient Details</h5>
+                                <div class="input-group">
+                                    <label for="username">PatientId:</label>
+                                    <input type="number" id="patientId" name="patientId" required>
+                                </div>
+                                <div class="input-group">
+                                    <label for="Date">Date</label>
+                                    <input type="date" id="date" name="date" required>
+                                </div>
+                                <div class="input-group">
+                                    <label for="Diagnose"> Diagnose</label>
+                                    <input type="Diagnose" id="Diagnose" name="Diagnose" required>
+                                </div>
+                                <div class="input-group">
+                                    <label for="medications">medications</label>
+                                    <input type="medications" id="medications" name="medications" required>
+                                </div>
+                                <div class="input-group">
+                                    <label for="notes">notes and annotations</label>
+                                    <input type="notes" id="notes" name="notes" required>
+                                </div>
+                                <div class="input-group">
+                                    <button type="submit" class="btn" name="submit">Submit</button>
+                                </div>
+                            </form>
+                            
+                        </div>
+                    </div>
+                </section>
+                
+                <section id="medical">
+                    <div class="content-1">
+                        <div id="medical" class="Medicalhistory">                    
+                            <div class="title">
+                                <h2>Patient Medical History</h2>
+                                <a href="#" class="btn">View All</a>
+                            </div>
+                            <h3>if you want to get patient history enter his/her insurance number</h3>
+                            <input type="text"><button>search</button>
+                            <table>
+                                <tr>
+                                    <th>Date</th>
+                                    <th>Record Id</th>
+                                    <th>insurance number</th>
+                                    <th>Nurse Id</th>
+                                    <th>Diagnosis</th>
+                                    <th>Medications</th>
+                                    <th>Notes</th>
+                                </tr>
+                                
+                            </table>
+                        </div>
+                    </div>
+                </section>
+                <section id="pList">     
+                    <div class="content-2">
+                        <div class="new-students">
+                            <div class="title">
+                                <h2>Patient List</h2>
+                                <a href="#" class="btn">View All</a>
+                            </div>
+                            <table>
+                                <tr>
+                                    <th>Patient Id</th>
+                                    <th>Date</th>
+                                    <th>Disease</th>
+                                    <th>Diagnosis</th>
+                                </tr>
+                                
+                            </table>
+                        </div>
+                    </div>
+                </section>   
+            </div>
+        </div>
+    </body> 
+</html> 
