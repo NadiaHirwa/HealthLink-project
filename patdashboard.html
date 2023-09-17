@@ -14,9 +14,9 @@
             </div>
             <ul>
                 <li><span><a href="#medical">Medical History</a></span></li>
-                <li><span><a href="#Results">Test Results</a></span></li>
+                <!-- <li><span><a href="#Results">Test Results</a></span></li> -->
                 <li><span><a href="#UpAppointments">Upcoming Appointment</a></span></li>
-                <li><span><a href="#AppSche">Appointment Scheduling</a></span></li>
+                
                 <!-- <li><span><a href="#message">Messaging system</a></span></li> -->
                 <li><span><a href="index.html">Logout</a></span></li>
             </ul>
@@ -51,13 +51,21 @@
                                 <tr>
                                     <th>Date</th>
                                     <th>Record Id</th>
-                                    <th>insurance number</th>
+                                    
                                     <th>Doctor id</th>
                                     <th>Nurse Id</th>
                                     <th>Diagnosis</th>
                                     <th>Medications</th>
                                 </tr>
-                                
+                                <?php
+                                    require "connect.php"; 
+                                    $result = mysqli_query ($conn, "SELECT * FROM medical_record");
+                                    while($row = mysqli_fetch_assoc($result))
+                                    {
+                                        echo "<tr> <td>".$row['Date']."<td>".$row['RecordId']." <td>".$row['DoctorId']."<td>".$row['NurseId']."<td>".$row['Diagnosis']."<td>".$row['Medications']."<td>".$row['Notes']."</tr>";
+                                    }
+                                    
+                                ?>
                             </table>
                         </div>
                     </div>
@@ -80,7 +88,7 @@
                         </div>
                     </div>
                 </section>
-                <section id="Results">
+                <!-- <section id="Results">
                     <div class="content-2">
                         <div class="new-students">
                             <div class="title">
@@ -94,15 +102,13 @@
                                     <th>explanations</th>
                                 </tr>
                                 <?php
-
                                 $result = mysqli_query( $con, "SELECT * FROM medical_record");
                                 while($row = mysqli_query)
-                                
                                 ?>
                             </table>
                         </div>
                     </div>
-                </section>
+                </section> -->
                 
             </div>
         </div>

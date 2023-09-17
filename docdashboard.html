@@ -52,19 +52,17 @@
                                     <th>Date</th>
                                     <th>patientId</th>
                                     <th>Reason</th>
+                                    <th>Status</th>
                                 </tr>
                                 <?php
                                     require "connect.php"; 
-                                    $result = mysqli_query ($conn, "SELECT * FROM medical_record");
+                                    $result = mysqli_query ($conn, "SELECT *FROM appointment");
+                                    
                                     while($row = mysqli_fetch_assoc($result))
                                     {
-                                        echo "<tr> <td>".$row['Date']."<td>".$row['patientId']."</tr>";
+                                        echo "<tr> <td>".$row['Date']."<td>".$row['patientId']."<td>".$row['Reason']." <td>".$row['Status']."</tr>";
                                     }
-                                    $result = mysqli_query ($conn, "SELECT * FROM appointment");
-                                    while($row = mysqli_fetch_assoc($result))
-                                    {
-                                        echo "<tr> <td>".$row['reason']."</tr>";
-                                    }
+                                    
                                 ?>
                             </table>
                         </div>
@@ -215,8 +213,7 @@
                             </form>
                         </div>
                     </div>
-                </section>
-                
+                </section>  
             </div>
         </div>
     </body> 

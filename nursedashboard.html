@@ -14,8 +14,8 @@
             </div>
             <ul> 
                 <li><span><a href="#medical">Medical History</a></span></li>
-                <li><span><a href="#passess">Patient Assessments</a></span></li>
-                <li><span><a href="#pList">Patient List</a></span></li>
+                <li><span><a href="#passess">Update History</a></span></li>
+                <!-- <li><span><a href="#pList">Patient Assessments</a></span></li> -->
                 <li> <span><a href="index.html">Logout</a></span></li>
             </ul>
         </div>
@@ -124,18 +124,26 @@
                                 <tr>
                                     <th>Date</th>
                                     <th>Record Id</th>
-                                    <th>insurance number</th>
+                                    <th>DoctorId Id</th>
                                     <th>Nurse Id</th>
                                     <th>Diagnosis</th>
                                     <th>Medications</th>
                                     <th>Notes</th>
                                 </tr>
-                                
+                                <?php
+                                    require "connect.php"; 
+                                    $result = mysqli_query ($conn, "SELECT * FROM medical_record");
+                                    while($row = mysqli_fetch_assoc($result))
+                                    {
+                                        echo "<tr> <td>".$row['Date']."<td>".$row['RecordId']."<td>".$row['DoctorId']."<td>".$row['NurseId']."<td>".$row['Diagnosis']."<td>".$row['Medications']."<td>".$row['Notes']."</tr>";
+                                    }
+                                    
+                                ?>
                             </table>
                         </div>
                     </div>
                 </section>
-                <section id="pList">     
+                <!-- <section id="pList">     
                     <div class="content-2">
                         <div class="new-students">
                             <div class="title">
@@ -153,7 +161,7 @@
                             </table>
                         </div>
                     </div>
-                </section>   
+                </section>    -->
             </div>
         </div>
     </body> 
