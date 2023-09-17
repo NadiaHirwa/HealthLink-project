@@ -4,7 +4,7 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initialscale=1.0">
-        <link rel="stylesheet" href="./styles/dashboard.css">
+        <link rel="stylesheet" href="../styles/dashboard.css">
         <title>#doctor panel</title>
         
     </head>
@@ -56,7 +56,7 @@
                                 </tr>
                                 <?php
                                     require "connect.php"; 
-                                    $result = mysqli_query ($conn, "SELECT *FROM appointment");
+                                    $result = mysqli_query ($connect, "SELECT *FROM appointment");
                                     
                                     while($row = mysqli_fetch_assoc($result))
                                     {
@@ -177,7 +177,7 @@
                                 </tr>
                                 <?php
                                     require "connect.php"; 
-                                    $result = mysqli_query ($conn, "SELECT * FROM medical_record");
+                                    $result = mysqli_query ($connect, "SELECT * FROM medical_record");
                                     while($row = mysqli_fetch_assoc($result))
                                     {
                                         echo "<tr> <td>".$row['Date']."<td>".$row['RecordId']." <td>".$row['DoctorId']."<td>".$row['NurseId']."<td>".$row['Diagnosis']."<td>".$row['Medications']."<td>".$row['Notes']."</tr>";
