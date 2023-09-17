@@ -80,25 +80,43 @@
                 #divisions div{
                     background-color: rgb(255, 255, 255);
                     align-items: center;
-                    margin: 10px;
+                    margin: 20px;
                     width: 100%;
-                    padding: 10px;
+                    
+                    
+                }
+                #divisions .message h3 {
+                    margin-left: 10%;
+                }
+                #divisions input{
+                    width: 80%;
+                }
+                #divisions a{
+                    color: black;
+                }
+                #divisions a:hover{
+                    color: blue;
+                }
+                #divisions button{
+                    margin-left: 40px;
+                    margin-top: 15px;
+                    background-color: rgb(168, 168, 243);
                 }
             </style>
             <div id="divisions">
-                <div>
+                <div class="message">
                     <h3>MESSAGE US</h3>
                     <div id="column">
                         <div id="input-box"> 
-                          <label for=" ">Full Name</label>
+                          <label for=" ">Full Name:</label>
                           <input type="txt" required />
                         </div>  
                         <div id="input-box">
-                          <label>Email Address</label>
+                          <label>Email Address:</label>
                           <input type="email" required />
                         </div>
                         <div id="input-box">
-                          <label>Phone Number</label>
+                          <label>Phone Number:</label>
                           <input type="number" required />
                         </div>
                     </div>

@@ -150,7 +150,7 @@ td,th{
     margin-bottom: 5vh;
 }
 .container .content .content-2{
-    min-height: 60vh;
+    min-height: 40vh;
     display: flex;
     justify-content: space-around;
     align-items: flex-start;
@@ -171,6 +171,7 @@ td,th{
     background: white;
     min-height: 50vh;
     margin: 0 25px;
+    margin-bottom: 40px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     display: flex;
     flex-direction: column;
@@ -185,7 +186,7 @@ td,th{
 }
 /* content history start */
 .container .content .content-1{
-    min-height: 80vh;
+    min-height: 40vh;
     display: flex;
     flex-wrap: wrap;
     background: white;

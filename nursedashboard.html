@@ -38,6 +38,41 @@
             
             <div class="content">
                 <h1>WELCOME #name</h1>
+                <section id="medical">
+                    <div class="content-1">
+                        <div id="medical" class="Medicalhistory">                    
+                            <div class="title">
+                                <h2>Patient Medical History</h2>
+                                <a href="#" class="btn">View All</a>
+                            </div>
+                            <h3>if you want to get patient history enter his/her insurance number</h3>
+                            <div class="search">
+                                <input type="search" placeholder="Search...">
+                                <button type="submit"><img src="./imgs/search2.png"></button>
+                            </div>
+                            <table>
+                                <tr>
+                                    <th>Date</th>
+                                    <th>Record Id</th>
+                                    <th>DoctorId Id</th>
+                                    <th>Nurse Id</th>
+                                    <th>Diagnosis</th>
+                                    <th>Medications</th>
+                                    <th>Notes</th>
+                                </tr>
+                                <!-- <?php
+                                    require "connect.php"; 
+                                    $result = mysqli_query ($conn, "SELECT * FROM medical_record");
+                                    while($row = mysqli_fetch_assoc($result))
+                                    {
+                                        echo "<tr> <td>".$row['Date']."<td>".$row['RecordId']."<td>".$row['DoctorId']."<td>".$row['NurseId']."<td>".$row['Diagnosis']."<td>".$row['Medications']."<td>".$row['Notes']."</tr>";
+                                    }
+                                    
+                                ?> -->
+                            </table>
+                        </div>
+                    </div>
+                </section>
                 <section id="passess">     
                     <div class="content-2">
                         <div class="new-students">
@@ -59,10 +94,16 @@
                                     color: #19191a;
                                 }
                                 
+                                .search button img{
+                                    width: 20px;
+                                    height: 20px;
+                                }
                                 input[type="text"],
-                                input[type="password"] {
-                                    width: 90%;
-                                    padding: 10px;
+                                input[type="number"],
+                                input[type="date"] {
+                                    height: 40px;
+                                    width: 60%;
+                                    padding: 5px;
                                     border: 1px solid #ccc;
                                     border-radius: 3px;
                                 }
@@ -92,15 +133,15 @@
                                 </div>
                                 <div class="input-group">
                                     <label for="Diagnose"> Diagnose</label>
-                                    <input type="Diagnose" id="Diagnose" name="Diagnose" required>
+                                    <input type="text" id="Diagnose" name="Diagnose" required>
                                 </div>
                                 <div class="input-group">
                                     <label for="medications">medications</label>
-                                    <input type="medications" id="medications" name="medications" required>
+                                    <input type="text" id="medications" name="medications" required>
                                 </div>
                                 <div class="input-group">
                                     <label for="notes">notes and annotations</label>
-                                    <input type="notes" id="notes" name="notes" required>
+                                    <input type="text" id="notes" name="notes" required>
                                 </div>
                                 <div class="input-group">
                                     <button type="submit" class="btn" name="submit">Submit</button>
@@ -111,38 +152,7 @@
                     </div>
                 </section>
                 
-                <section id="medical">
-                    <div class="content-1">
-                        <div id="medical" class="Medicalhistory">                    
-                            <div class="title">
-                                <h2>Patient Medical History</h2>
-                                <a href="#" class="btn">View All</a>
-                            </div>
-                            <h3>if you want to get patient history enter his/her insurance number</h3>
-                            <input type="text"><button>search</button>
-                            <table>
-                                <tr>
-                                    <th>Date</th>
-                                    <th>Record Id</th>
-                                    <th>DoctorId Id</th>
-                                    <th>Nurse Id</th>
-                                    <th>Diagnosis</th>
-                                    <th>Medications</th>
-                                    <th>Notes</th>
-                                </tr>
-                                <?php
-                                    require "connect.php"; 
-                                    $result = mysqli_query ($conn, "SELECT * FROM medical_record");
-                                    while($row = mysqli_fetch_assoc($result))
-                                    {
-                                        echo "<tr> <td>".$row['Date']."<td>".$row['RecordId']."<td>".$row['DoctorId']."<td>".$row['NurseId']."<td>".$row['Diagnosis']."<td>".$row['Medications']."<td>".$row['Notes']."</tr>";
-                                    }
-                                    
-                                ?>
-                            </table>
-                        </div>
-                    </div>
-                </section>
+                
                 <!-- <section id="pList">     
                     <div class="content-2">
                         <div class="new-students">
